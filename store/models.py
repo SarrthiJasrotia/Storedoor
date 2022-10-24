@@ -15,11 +15,11 @@ class Customer(models.Model):
         return self.name
 
 class Product(models.Model):
-     name = models.CharField(max_length=200, null= True)
-     price = models.FloatField()
-     digital = models.BooleanField(default=False, null= True, blank=False)
-
-     def __str__(self) :
+    name = models.CharField(max_length=200, null= True)
+    price = models.FloatField()
+    digital = models.BooleanField(default=False, null= True, blank=False)
+    image =models.ImageField(null=True, blank=True)
+    def __str__(self) :
         return self.name
 
 class Order(models.Model):
