@@ -7,10 +7,12 @@
 
 {% for product in products %}
  <div class="productCard">
+   <button data-product={{product.id}} data-action="add" class="updateCart">UPDATE</button>
     <img  src="{{product.imageURL}}" >
     <h1> {{product.name}} </h1>
    
     <h2>${{product.price|floatformat:2}}</h2>
+    
  </div>
 {% endfor %}
 </div>

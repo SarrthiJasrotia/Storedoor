@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 
-    <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-    <html class="no-js" lang="en" >
-    
-      <head>
-        <meta charset="utf-8">
-        <!-- If you delete this meta tag World War Z will become a reality -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>StoreDoor</title>
-        {% load static%}
-        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    
-      </head>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- If you delete this meta tag World War Z will become a reality -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreDoor</title>
+  {% load static%}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <script type="text/javascript" src="{% static 'js/cart.js' %}" defer></script>
+</head>
 
 
-      <body>
-        <div class='Nav'>
-          <a href="/">Store</a>
-          
-          <a href="/cart">Cart</a>
-          
-          </div>
-          
-        {% block content %}
+<body>
+  <div class='Nav'>
+    <a href="/">Store</a>
+
+    <a href="/cart">Cart</a>
+
+  </div>
+
+  {% block content %}
 
 
-        {% endblock content %}
-    
-    
-      </body>
+  {% endblock content %}
+
+
+</body>
 
 </html>
