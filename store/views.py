@@ -1,4 +1,4 @@
-
+from django.http import JsonResponse
 from django.shortcuts import render
 from .models import *
 # Create your views here.
@@ -20,3 +20,6 @@ def cart(request):
     data = {'items':items, 'order':order}
     return render(request, 'store/cart.html', data)
 
+
+def updateItem(request):
+    return JsonResponse('Item was added', safe=False)

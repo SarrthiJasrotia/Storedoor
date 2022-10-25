@@ -10,6 +10,9 @@
   <title>StoreDoor</title>
   {% load static%}
   <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <script type="text/javascript">
+    var user = '{{request.user}}'
+  </script>
   <script type="text/javascript" src="{% static 'js/cart.js' %}" defer></script>
 </head>
 
