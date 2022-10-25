@@ -4,8 +4,12 @@
 
 <h1>CART TOTAL ${{order.get_cart_total}}  QUANTY:{{order.get_item_total}} </h1>
 {% for item in items %}
+
+
 <h3>ItemName: {{item.product.name}} ${{item.product.price|floatformat:2}} 
     quantity: {{item.quantity}} TOTAL: ${{item.get_total}}
+    <button data-product="{{item.product.id}}" data-action="add" class="updateCart">add</button>
+    <button data-product="{{item.product.id}}" data-action="remove" class="updateCart">remove</button>
 </h3>
 {% endfor %}
 {% endblock content %}
