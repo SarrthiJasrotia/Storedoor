@@ -6,10 +6,16 @@ from .models import *
 #Store 
 def store(request):
     products = Product.objects.all()
-    context = {'products': products}
-    return render(request, 'store/store.html', context)
+    data = {'products': products}
+    return render(request, 'store/store.html', data)
 #cart
 def cart(request):
-    context = {}
-    return render(request, 'store/cart.html')
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+    else:
+        items =[]
+    data = {'items':items}
+    return render(request, 'store/cart.html',data)
 
