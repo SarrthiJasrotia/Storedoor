@@ -5,12 +5,6 @@ var updateBtn = document.getElementsByClassName("updateCart")
 
 
 
-// updateBtn.forEach(addEventListener("click", function(){
-//     var productId = this.dataset.product
-//     var action = this.dataset.action
-//     console.log('productId:',productId, 'Action:',action)
-// }));
-
 
 
 
@@ -22,7 +16,7 @@ for( let i = 0; i < updateBtn.length; i++){
 
         console.log('user',user)
         if (user ==="AnonymousUser"){
-            console.log('not logged in')
+            alert('NEED TO LOGIN IN')
         }else{
             updateUserOrder(productId, action)
         }
@@ -49,8 +43,8 @@ function updateUserOrder(productId,action){
 
     })
     .then((data)=>{
-        
-        console.log('data',data)
+
+        location. reload()
         
     })
 
