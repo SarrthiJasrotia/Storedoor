@@ -16,7 +16,7 @@
 ## ScreenShots
 
 ### Store
-![image](https://user-images.githubusercontent.com/60264331/198035885-1daa4314-fc1e-4725-a2a5-110d764a5e9c.png)
+![image](https://user-images.githubusercontent.com/60264331/198052097-60f12fb1-5151-484c-bfb3-29b5b12a1a5c.png)
 
 ### Cart
 ![image](https://user-images.githubusercontent.com/60264331/198036160-0dcba6b1-b7cf-4b40-9b62-5957ec473e6e.png)
