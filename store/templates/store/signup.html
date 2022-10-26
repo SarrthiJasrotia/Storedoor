@@ -1,9 +1,9 @@
 {% extends 'store/main.html' %}
 {% block content %}
 
-<div class="centerform">
+<div class="cartItems">
   <h1>Sign Up</h1>
-</div>
+
 
 <div class="body">
   <div class="container">
@@ -15,10 +15,10 @@
     <form method="post" action="{% url 'signup' %}">
       {% csrf_token %} {{ form.as_p }}
       <div class="btnhold">
-      <input type="submit" class="btn" value="Signup" />
+      <input type="submit" class="signup" value="Signup" />
       </div>
     </form>
   </div>
 </div>
-
+</div>
 {% endblock %}
