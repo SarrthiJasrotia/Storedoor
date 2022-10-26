@@ -36,16 +36,18 @@
 
 <body>
   <div class='Nav'>
-    <a href="/">Store</a>
+    <a id="logo" href="/"><strong>StoreDoor</strong></a>
 
-    <a href="/cart">Cart</a>
+    <a href="/cart"><img id="cartpic" src="{% static 'images/cart.png' %}"></a>
 
-    <a href="/signup">signup</a>
+    
   
-    <a href="/createProduct">createProduct</a>
+    
     {% if user.is_authenticated %}
+    <a href="/createProduct">createProduct</a>
     <a href="/logout_user">Logout</a>
     {% else %}
+    <a href="/signup">signup</a>
     <a href="/login_user">Login</a>
     {% endif %}
 

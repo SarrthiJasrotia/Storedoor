@@ -2,14 +2,16 @@
 {% load static %}
 {% block content %}
 
-<h1>CART TOTAL ${{order.get_cart_total}}  QUANTY:{{order.get_item_total}} </h1>
+<div class="cartItems">
 {% for item in items %}
 
 
-<h3>ItemName: {{item.product.name}} ${{item.product.price|floatformat:2}} 
-    quantity: {{item.quantity}} TOTAL: ${{item.get_total}}
-    <button data-product="{{item.product.id}}" data-action="add" class="updateCart">add</button>
-    <button data-product="{{item.product.id}}" data-action="remove" class="updateCart">remove</button>
-</h3>
+<div class="orderItem"><span class="itemName">{{item.product.name}}</span> <span class="itemPrice">${{item.product.price|floatformat:2}}</span> 
+    <span class="itemQty">Qty: {{item.quantity}}</span> <span class="Itemtotal">Item-Total: ${{item.get_total}}</span>
+    <div class="btnUpdate">
+    <button data-product="{{item.product.id}}" data-action="add" class="updateCart">+</button>
+    <button data-product="{{item.product.id}}" data-action="remove" class="updateCart">-</button>
+</div></div>
 {% endfor %}
-{% endblock content %}
+<div> <span class="QtyTotal">TOTAL-QUANTY: {{order.get_item_total}}</span><span class="cartTotal">CART-TOTAL: ${{order.get_cart_total}}</span>  </div>
+</div>{% endblock content %}
