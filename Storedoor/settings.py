@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n0ql1p!d6gj%8iupvb)&cky*5d&chom$8&jvw@ta!2ar9z3@(@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['damp-hamlet-55268.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -118,14 +118,20 @@ USE_I18N = True
 USE_TZ = True
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
